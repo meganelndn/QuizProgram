@@ -10,8 +10,15 @@
     <title>Quiz Program & To-Do List</title>
 </head>
 <body>
-    <!-- TODO LIST -->
-    <div class="container">
+    <!-- BTNS TO SHOW CONTENT -->
+    <h1 class="display-5 text-center">What would you like to try out today?</h1>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="button" class="btn btn-dark btn-lg mx-auto showQuiz">Quiz Program</button>
+        <button type="button" class="btn btn-dark btn-lg mx-auto showTodo">To-Do List</button>
+    </div>
+
+    <!---------- TODO LIST ---------->
+    <div class="container todoList hide">
         <header class="text-center text-light my-4">
             <h1 class="mb-4">To-Do List</h1>
             <form class="search">
@@ -21,15 +28,15 @@
 
         <ul class="list-group todos mx-auto text-light">
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>play mariokart</span>
+                <span>Get PCR tested</span>
                 <i class="far fa-trash-alt delete"></i>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>defeat ganon in zelda</span>
+                <span>Go for a run</span>
                 <i class="far fa-trash-alt delete"></i>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>make a veggie pan</span>
+                <span>Read a book</span>
                 <i class="far fa-trash-alt delete"></i>
             </li>
         </ul>
@@ -40,110 +47,111 @@
         </form>
     </div>
 
-    
-    <!-- QUIZ -->
+    <!---------- QUIZ ---------->
 
     <!-- top section -->
-    <div class="intro py-3 bg-white text-center">
-        <div class="container">
-            <h1 class="text-primary display-3 my-4">Quiz Program</h1>
+    <div class="quiz hide">
+        <div class="intro py-3 bg-white text-center">
+            <div class="container">
+                <h1 class="text-primary display-3 my-4">Quiz Program</h1>
+            </div>
         </div>
-    </div>
 
-    <!-- result section -->
-    <div class="result py-4 d-none bg-light text-center">
-        <div class="container lead">
-            <p>You are <span class="text-primary display-4 p-3">0%</span> correct</p>
+        <!-- result section -->
+        <div class="result py-4 d-none bg-light text-center">
+            <div class="container lead">
+                <p>You are <span class="text-primary display-4 p-3">0%</span> correct</p>
+            </div>
         </div>
-    </div>
 
-    <!-- quiz section -->
-    <div class="quiz py-4 bg-primary">
-        <div class="container">
-            <h2 class="my-5 text-white">On with the questions...</h2>
+        <!-- quiz section -->
+        <div class="quiz py-4 bg-primary">
+            <div class="container">
+                <h2 class="my-5 text-white">On with the questions...</h2>
 
-            <form class="quiz-form text-light">
-                <div class="my-5">
-                    <p class="lead font-weight-normal">1. You live in a one-story house made of redwood. What color are the stairs?</p>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q1" value="A" checked>
-                        <label class="form-check-label">Brown</label>
+                <form class="quiz-form text-light">
+                    <div class="my-5">
+                        <p class="lead font-weight-normal">1. You live in a one-story house made of redwood. What color are the stairs?</p>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q1" value="A" checked>
+                            <label class="form-check-label">Brown</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q1" value="B">
+                            <label class="form-check-label">White</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q1" value="C">
+                            <label class="form-check-label">Red</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q1" value="D">
+                            <label class="form-check-label">None of the above</label>
+                        </div>
                     </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q1" value="B">
-                        <label class="form-check-label">White</label>
+                    <div class="my-5">
+                        <p class="lead font-weight-normal">2. What goes up but never comes down?</p>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q2" value="A" checked>
+                            <label class="form-check-label">Balloons</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q2" value="B">
+                            <label class="form-check-label">Temperature</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q2" value="C">
+                            <label class="form-check-label">Age</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q2" value="D">
+                            <label class="form-check-label">Clouds</label>
+                        </div>
                     </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q1" value="C">
-                        <label class="form-check-label">Red</label>
+                    <div class="my-5">
+                        <p class="lead font-weight-normal">3. What room do ghosts avoid?</p>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q3" value="A" checked>
+                            <label class="form-check-label">The kitchen</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q3" value="B">
+                            <label class="form-check-label">The bathroom</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q3" value="C">
+                            <label class="form-check-label">The bedroom</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q3" value="D">
+                            <label class="form-check-label">The living room</label>
+                        </div>
                     </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q1" value="D">
-                        <label class="form-check-label">None of the above</label>
+                    <div class="my-5">
+                        <p class="lead font-weight-normal">4. What is tall when it’s young, but short when it’s old?</p>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q4" value="A" checked>
+                            <label class="form-check-label">A candle</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q4" value="B">
+                            <label class="form-check-label">A puppy</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q4" value="C">
+                            <label class="form-check-label">A tree</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q4" value="D">
+                            <label class="form-check-label">A rumour</label>
+                        </div>
                     </div>
-                </div>
-                <div class="my-5">
-                    <p class="lead font-weight-normal">2. What goes up but never comes down?</p>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q2" value="A" checked>
-                        <label class="form-check-label">Balloons</label>
+                    <div class="text-ceter">
+                        <input type="submit" class="btn btn-light">
                     </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q2" value="B">
-                        <label class="form-check-label">Temperature</label>
-                    </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q2" value="C">
-                        <label class="form-check-label">Age</label>
-                    </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q2" value="D">
-                        <label class="form-check-label">Clouds</label>
-                    </div>
-                </div>
-                <div class="my-5">
-                    <p class="lead font-weight-normal">3. What room do ghosts avoid?</p>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q3" value="A" checked>
-                        <label class="form-check-label">The kitchen</label>
-                    </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q3" value="B">
-                        <label class="form-check-label">The bathroom</label>
-                    </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q3" value="C">
-                        <label class="form-check-label">The bedroom</label>
-                    </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q3" value="D">
-                        <label class="form-check-label">The living room</label>
-                    </div>
-                </div>
-                <div class="my-5">
-                    <p class="lead font-weight-normal">4. What is tall when it’s young, but short when it’s old?</p>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q4" value="A" checked>
-                        <label class="form-check-label">A candle</label>
-                    </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q4" value="B">
-                        <label class="form-check-label">A puppy</label>
-                    </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q4" value="C">
-                        <label class="form-check-label">A tree</label>
-                    </div>
-                    <div class="form-check my-2 text-white-50">
-                        <input type="radio" name="q4" value="D">
-                        <label class="form-check-label">A rumour</label>
-                    </div>
-                </div>
-                <div class="text-ceter">
-                    <input type="submit" class="btn btn-light">
-                </div>
-            </form>
+                </form>
 
+            </div>
         </div>
     </div>
 

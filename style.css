@@ -1,22 +1,31 @@
-body {
-    background: #352f5b;
+h1 {
+    padding: 30px;
+}
+.todoList {
+    padding: 30px;
+    background: burlywood;
 }
 .container {
     max-width: 400px;
 }
 input[type=text],
 input[type=text]:focus {
-    color: #fff;
+    color: #000;
     border: none;
-    background: rgba(0,0,0,0.2);
+    background: white;
     max-width: 400px;
 }
 .todos li {
-    background: #423a6f;
+    background: beige;
 }
 .delete {
     cursor: pointer;
 }
-.filtered {
-    display: none !important;
+.filtered, .hide {
+    display: none;
+}
+.showTodo:hover, .showQuiz:hover {
+    background: inherit;
+    border: 1px solid #000;
+    color: #000;
 }

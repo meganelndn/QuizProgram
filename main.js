@@ -1,3 +1,16 @@
+const buttonShowQuiz = document.querySelector(".showQuiz");
+const buttonShowTodo = document.querySelector(".showTodo");
+const todoList = document.querySelector(".todoList");
+const quiz = document.querySelector(".quiz");
+
+buttonShowTodo.addEventListener("click", e => {
+    todoList.classList.toggle("hide");
+})
+buttonShowQuiz.addEventListener("click", e => {
+    quiz.classList.toggle("hide");
+})
+
+
 /******** TODO LIST ********/
 
 const addForm = document.querySelector(".add");
@@ -26,13 +39,12 @@ addForm.addEventListener("submit", e => {
     }
 })
 
-// delete todos
+// delete todos 
 list.addEventListener("click", e => {
     if(e.target.classList.contains("delete")){
         e.target.parentElement.remove();
     }
 })
-
 // filter todos
 const filterTodos = term => {
     // remove todos that do not match search query
@@ -45,7 +57,6 @@ const filterTodos = term => {
         .filter((todo) => todo.textContent.toLowerCase().includes(term))
         .forEach((todo) => todo.classList.remove("filtered"))
 }
-
 // keyup event
 search.addEventListener("keyup", () => {
     const term = search.value.trim().toLowerCase();
